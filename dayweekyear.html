@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <script>
+        window.onload = function () {
+            var daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+            var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+            var currentDate = new Date();
+            var dayOfWeek = daysOfWeek[currentDate.getDay()];
+            var day = currentDate.getDate();
+            var month = months[currentDate.getMonth()];
+            var year = currentDate.getFullYear();
+
+            document.getElementById('date').innerHTML = dayOfWeek + ', ' + day + ' ' + month + ' ' + year;
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Текущая дата:</h1>
+    <p id="date"></p>
+    <li>
+        <a href="index.html">Вернуться на главную</a>
+    </li>
+</body>
+
+</html>

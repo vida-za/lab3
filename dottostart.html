@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <script>
+        window.onload = function () {
+            var xCoordinate = parseFloat(prompt("Введите координату X"));
+            var yCoordinate = parseFloat(prompt("Введите координату Y"));
+
+            var distance = Math.sqrt(Math.pow(xCoordinate, 2) + Math.pow(yCoordinate, 2));
+
+            document.getElementById('distance').value = distance;
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Расстояние от точки до начала координат:</h1>
+    <input type="text" id="distance" readonly>
+    <li>
+        <a href="index.html">Вернуться на главную</a>
+    </li>
+</body>
+
+</html>

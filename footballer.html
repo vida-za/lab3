@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <script>
+        function showArtwork() {
+            var footballer = document.getElementById('footballer').value;
+            var description = document.getElementById('description').value;
+            var image = document.querySelector('input[name="image"]:checked').value;
+
+            var italic = document.getElementById('italic').checked;
+            var bold = document.getElementById('bold').checked;
+            var underline = document.getElementById('underline').checked;
+
+            var text = document.getElementById('text');
+
+            text.innerHTML = description;
+            text.style.fontStyle = italic ? 'italic' : 'normal'
+            text.style.fontWeight = bold ? 'bold' : 'normal'
+            text.style.textDecoration = underline ? 'underline' : 'none'
+
+            var artwork = document.getElementById('artwork');
+            artwork.innerHTML = '<h1>' + footballer + '</h1>' + '<img src="' + image + '" alt="Artwork">';
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Выберите имя футболиста:</h1>
+    <select id="footballer">
+        <option value="Андрей Шевченко">Андрей Шевченко</option>
+        <option value="Деку">Деку</option>
+        <option value="Роналдиньо">Роналдиньо</option>
+    </select>
+
+    <h1>Введите описание:</h1>
+    <textarea id="description"></textarea>
+
+    <h1>Выберите картинку:</h1>
+    <input type="radio" name="image" value="images/shevchenko.jpg">shevchenko
+    <input type="radio" name="image" value="images/deku.jpg">deku
+    <input type="radio" name="image" value="images/ronaldinho.jpg">ronaldinho
+
+    <h1>Выберите декорирование текста:</h1>
+    <input type="checkbox" id="italic"> Курсив
+    <input type="checkbox" id="bold"> Жирный
+    <input type="checkbox" id="underline"> Подчеркнутый
+
+    <br><br>
+    <button onclick="showArtwork()">Показать</button>
+
+    <div id="artwork"></div>
+    <div id="text"></div>
+    <li>
+        <a href="index.html">Вернуться на главную</a>
+    </li>
+</body>
+
+</html>

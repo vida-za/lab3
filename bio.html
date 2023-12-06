@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Форма</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+
+<body>
+  <form>
+    <label for="surname">Фамилия:</label>
+    <input type="text" id="surname" name="surname"><br>
+
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="patronymic">Отчество:</label>
+    <input type="text" id="patronymic" name="patronymic"><br>
+
+    <label for="birthYear">Год рождения:</label>
+    <input type="text" id="birthYear" name="birthYear"><br>
+
+    <label for="birthPlace">Место рождения:</label>
+    <input type="text" id="birthPlace" name="birthPlace"><br>
+
+    <label for="favoriteActivity">Любимое занятие:</label>
+    <input type="text" id="favoriteActivity" name="favoriteActivity"><br>
+
+    <label for="hatedActivity">Нелюбимое занятие:</label>
+    <input type="text" id="hatedActivity" name="hatedActivity"><br>
+
+    <button type="button" onclick="generateText()">Сформировать</button>
+  </form>
+
+  <p id="outputText"></p>
+
+  <script>
+    function generateText() {
+      var surname = document.getElementById("surname").value;
+      var name = document.getElementById("name").value;
+      var patronymic = document.getElementById("patronymic").value;
+      var birthYear = document.getElementById("birthYear").value;
+      var birthPlace = document.getElementById("birthPlace").value;
+      var favoriteActivity = document.getElementById("favoriteActivity").value;
+      var hatedActivity = document.getElementById("hatedActivity").value;
+
+      var outputText = "Я, " + surname + ", " + name + ", " + patronymic + ", родился в " + birthYear + " году в городе " + birthPlace + "<br><br>" +
+        "Больше всего я люблю " + favoriteActivity + ", и не очень люблю " + hatedActivity + ". Было бы очень круто всю жизнь " + favoriteActivity + ", " +
+        "но все же порой приходится " + hatedActivity + ".";
+
+      document.getElementById("outputText").innerHTML = outputText;
+    }
+  </script>
+  <li>
+    <a href="index.html">Вернуться на главную</a>
+  </li>
+</body>
+
+</html>

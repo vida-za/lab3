@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <title>Формирование страницы</title>
+</head>
+
+<body>
+  <form>
+    <label for="name">Имя Героя:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="activity">Любимое занятие:</label>
+    <input type="text" id="activity" name="activity" required><br><br>
+
+    <label for="friend">Друг Героя:</label>
+    <input type="text" id="friend" name="friend" required><br><br>
+
+    <label for="gift">Любимый Подарок:</label>
+    <input type="text" id="gift" name="gift" required><br><br>
+
+    <input type="submit" value="Сформировать">
+  </form>
+
+  <div id="result">
+    <h2></h2>
+    <p></p>
+  </div>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var activity = document.getElementById('activity').value;
+      var friend = document.getElementById('friend').value;
+      var gift = document.getElementById('gift').value;
+
+      var result = document.getElementById('result');
+      result.querySelector('h2').textContent = 'В одной деревне жил да был ' + name + ', который очень любил ' + activity + '.';
+      result.querySelector('p').textContent = 'У него так хорошо получалось, что вся деревня об этом узнала. ' + friend + ' был очень горд своим другом. Спустя некоторое время он подарил своему другу ' + gift + '.';
+    });
+  </script>
+  <li>
+    <a href="index.html">Вернуться на главную</a>
+  </li>
+</body>
+
+</html>

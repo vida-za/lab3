@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <script>
+        window.onload = function () {
+            var daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+            var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+            var birthDate = new Date(prompt("Введите дату вашего рождения в формате ГГГГ-ММ-ДД"));
+            var dayOfWeek = daysOfWeek[birthDate.getDay()];
+            var date = birthDate.getDate();
+            var month = months[birthDate.getMonth()];
+            var year = birthDate.getFullYear();
+
+            document.getElementById('dayOfWeek').textContent = dayOfWeek;
+            document.getElementById('date').textContent = date;
+            document.getElementById('month').textContent = month;
+            document.getElementById('year').textContent = year;
+        };
+    </script>
+</head>
+
+<body>
+    <h1>Дата вашего рождения:</h1>
+    <p>День недели: <span id="dayOfWeek"></span></p>
+    <p>Число: <span id="date"></span></p>
+    <p>Месяц: <span id="month"></span></p>
+    <p>Год: <span id="year"></span></p>
+    <li>
+        <a href="index.html">Вернуться на главную</a>
+    </li>
+</body>
+
+</html>

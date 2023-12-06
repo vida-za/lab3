@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Лабораторная работа 3 Комракова Евгения</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+
+<body>
+  &nbsp;<div class="text">
+    <main>
+      <h1>Задание 1 - Игроки ФК Спартак Москва</h1>
+      <div class="text1zad">
+        <p>Наведите курсор и увидите фамилию игрока в соответсвующем поле.</p>
+      </div>
+
+
+      <title>Document</title>
+      <style>
+        img {
+          width: 320px;
+          height: 260px;
+          padding: 10px
+        }
+      </style>
+      </head>
+
+      <body>
+        <div class="wrap">
+          <img src="images/zoba.jpg" onmouseover="document.getElementById('Text').value='Зобнин'"
+            onmouseout="document.getElementById('Text').value=''">
+          <img src="images/promes.jpg" onmouseover="document.getElementById('Text').value='Промес'"
+            onmouseout="document.getElementById('Text').value=''"><br>
+          <img src="images/onopko.jpg" onmouseover="document.getElementById('Text').value='Онопко'"
+            onmouseout="document.getElementById('Text').value=''">
+          <img src="images/bongonda.jpg" onmouseover="document.getElementById('Text').value='Бонгонда'"
+            onmouseout="document.getElementById('Text').value=''"><br>
+          <div class="textboxstyle">
+            <input type="text" id="Text">
+          </div>
+        </div>
+      </body>
+
+</html>
+
+<head>
+  <style>
+    img {
+      width: 200;
+      height: 200
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .show-on-hover:hover .hidden {
+      display: block;
+    }
+  </style>
+  <script>
+    i = 0;
+    function slideShow() {
+      // массив картинок
+      ris = new Array('images/zoba.jpg', 'images/promes.jpg', 'images/onopko.jpg', 'images/bongonda.jpg');
+      // Проверяем, Не вышел ли счётчик за пределы массива 
+      if (i >= 4) i = 0; // если вышел, обнуляем счётчик. 
+      //переменная r объект с именем slide
+      r = document.getElementById('slide')
+      // Меняем свойство src этого объекта на элемент из массива 
+      r.src = ris[i];
+      i++;   // Увеличиваем счётчик
+      // вызываем эту же функцию через каждые 1500 мс
+    }
+  </script>
+</head>
+
+<body>
+  <h1> Задание 2 - Слайд-шоу </h1>
+  <img id='slide' src="images/zoba.jpg" />
+  <form>
+    <div class=buttonstyle>
+      <input type="button" value=" Далее " onClick="slideShow() ;">
+    </div>
+
+
+    <h1>Задание 3 - Топ легендарных тренеров ФК Спартак Москва</h1>
+
+    <table>
+      <tr>
+        <td class="show-on-hover">1. Романцев
+
+          <img src="images/romantsev.jpg" class="hidden" alt=" romantsev "
+            style="position: relative; left: 200px; top:0px;">
+        </td>
+      </tr>
+      <tr>
+        <td class="show-on-hover">2. Каррера
+
+          <img src="images/karrera.jpg" class="hidden" alt=" karrera" style="position: relative; left: 200px; top:0px;">
+        </td>
+      </tr>
+      <tr>
+        <td class="show-on-hover">3. Карпин
+
+          <img src="images/karpin.jpeg" class="hidden" alt=" karpin " style="position: relative; left: 200px; top:0px;">
+        </td>
+      </tr>
+    </table>
+    <div class=imgcatdog>
+      <img hidden src="images/romantsev.jpg" style.visibility='hidden'>
+      <img hidden src="images/karrera.jpg" style.visibility='visible'>
+      <img hidden src="images/karpin.jpeg" style.visibility='visible'>
+    </div>
+
+    <h1>Задание 4 - Слайд-шоу 2</h1>
+
+    <script>
+      i = 0;
+      function slideShow2() {
+        // массив картинок
+        ris2 = new Array('images/romantsev.jpg', 'images/karrera.jpg', 'images/karpin.jpeg');
+        // Проверяем, Не вышел ли счётчик за пределы массива 
+        if (i >= 3) i = 0; // если вышел, обнуляем счётчик. 
+        //переменная r объект с именем slide
+        r = document.getElementById('slide2')
+        // Меняем свойство src этого объекта на элемент из массива 
+        r.src = ris2[i];
+        i++;   // Увеличиваем счётчик
+        // вызываем эту же функцию через каждые 1500 мс
+      }
+    </script>
+
+    <img id='slide2' src="images/romantsev.jpg" />
+    <form>
+      <div class=buttonstyle>
+        <input type="button" value=" Далее " onClick="slideShow2() ;">
+      </div>
+
+
+      <h1>Задание 5 - Математика</h1>
+      <a href="calc.html">Перейти в калькулятор</a>
+
+      <h1>Задание 6 - Текущий день недели</h1>
+      <a href="dayweekyear.html">Узнать сегодняшний день недели</a>
+
+      <h1>Задание 7 - Дни жизни</h1>
+      <a href="daysoflife.html">Перейти к расчету</a>
+
+      <h1>Задание 8 - Координаты</h1>
+      <a href="dottostart.html">Перейти к расчету</a>
+
+      <h1>Задание 9 - День недели моего дня рождения</h1>
+      <a href="drDAY.html">Узнать день недели своего дня рождения</a>
+
+      <h1>Задание 10 - Площадь прямоугольника</h1>
+      <a href="ploshad.html">Перейти к расчету площади</a>
+
+      <h1>Задание 11 - Форма для страницы</h1>
+      <a href="form.html">Перейти в редактор формы</a>
+
+      <h1>Задание 12 - Форма для описания футболиста</h1>
+      <a href="footballer.html">Перейти в редактор формы для создания футболиста</a>
+
+      <h1>Задание 13 - Форма для создания биографии</h1>
+      <a href="bio.html">Перейти в редактор биографии</a>
+
+      <h1>Задание 14 - Форма для создания сказки</h1>
+      <a href="fairytale.html">Перейти в редактор сказки</a>
+    </form>
+</body>
+</main>
+</div>
+</body>
+
+</html>
